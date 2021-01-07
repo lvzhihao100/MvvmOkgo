@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--换肤产品，颜色-->
+    <color name="commonTextTitle">#FFFFFF</color>
+    <color name="commonTextContent">#A7ACBD</color>
+    <color name="commonTextHint">#AAACB4</color>
+    <color name="commonBgDeep">#141727</color>
+    <color name="commonBg">#1C233F</color>
+    <color name="commonSelect">#FFFFFF</color>
+    <color name="commonUnSelect">#B5B8C2</color>
+    <color name="commonGreen">#32b28f</color>
+    <color name="commonRed">#ff5755</color>
+    <color name="commonDivider">#141727</color>
+    <color name="commonApp">#4C83FF</color>
+    <color name="commonSolidButtonText">#FFFFFF</color>
+    <color name="commonGreenHint">#3032b28f</color>
+    <color name="commonRedHint">#30ff5755</color>
+    <color name="commonStroke">#3A4470</color>
+</resources>

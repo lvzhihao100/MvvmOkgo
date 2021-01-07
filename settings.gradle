@@ -1,0 +1,5 @@
+includeBuild 'VersionPlugin'
+include ':commom'
+include ':app'
+include ':login'
+rootProject.name = "MVVM1"

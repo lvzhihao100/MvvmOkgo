@@ -1,0 +1,61 @@
+import com.gamerole.plugin.BuildConfig
+
+//import com.gamerole.plugin.BuildConfig
+
+//plugins {
+//    id 'com.android.application'
+//    id 'kotlin-android'
+//}
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
+
+android {
+
+//    compileSdkVersion 30
+//    defaultConfig {
+//        minSdkVersion 21
+//        targetSdkVersion 30
+//        versionCode 1
+//        versionName "1"
+//        applicationId "com.gamerole.test"
+//    }
+    compileSdkVersion BuildConfig.compileSdkVersion
+    defaultConfig {
+        minSdkVersion BuildConfig.minSdkVersion
+        targetSdkVersion BuildConfig.targetSdkVersion
+        versionCode BuildConfig.versionCode
+        versionName BuildConfig.versionName
+        applicationId "com.gamerole.test"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    api "com.google.dagger:hilt-android:2.28-alpha"
+    kapt "com.google.dagger:hilt-android-compiler:2.28-alpha"
+    api 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02'
+    kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha02'
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    api project(path: ':commom')
+
+
+}
